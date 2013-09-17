@@ -91,6 +91,14 @@ You can change this folder with ``LESS_ROOT`` and ``LESS_OUTPUT_DIR`` settings.
 Note that all relative URLs in your stylesheet are converted to absolute URLs using your ``STATIC_URL`` setting.
 
 
+Manage commands
+---------------
+
+``generate_less``
+    Generates css files for all *.less fles in the STATIC_ROOT and files listed in GENERATE_LESS.
+    Note that it won't follow symilnks.
+
+
 Settings
 ********
 
@@ -111,3 +119,6 @@ Settings
 
 ``LESS_MTIME_DELAY``
     Cache timeout for reading the modification time of external stylesheets (in seconds). Default: 10 seconds.
+
+``LESS_GENERATE``
+    Tuple with additional files to process by the ``generate_less`` command. Default: ().
