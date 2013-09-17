@@ -18,6 +18,6 @@ class Command(NoArgsCommand):
                 found = os.path.join(root, filename)[len(settings.STATIC_ROOT) + 1:]
                 self.stdout.write("Processing '{0}'".format(found))
                 less(found)
-        for media_url in settings.GENERATE_LESS:
+        for media_url in settings.LESS_GENERATE:
             self.stdout.write("Processing '{0}'".format(media_url))
             less(media_url)
